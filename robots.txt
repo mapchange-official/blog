@@ -1,1 +1,1 @@
-Sitemap: https://blog.mapchange.com/sitemap.xml
+Sitemap: https://blog.mapchange.com/blog/sitemap.xml
