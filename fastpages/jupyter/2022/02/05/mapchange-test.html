@@ -168,7 +168,13 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span>
+    <span class="s2">"tags"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"hide_input"</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">google.oauth2</span> <span class="kn">import</span> <span class="n">service_account</span>
 <span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
@@ -193,7 +199,13 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_1</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s2">"""select election_cycle, sum(dem_predicted)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_1</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s2">"""{</span>
+<span class="s2">    "tags": [</span>
+<span class="s2">        "hide_input",</span>
+<span class="s2">    ]</span>
+<span class="s2">}</span>
+
+<span class="s2">select election_cycle, sum(dem_predicted)</span>
 <span class="s2">from `nyu-cap-ae.final.tableau_final_market`</span>
 <span class="s2">group by 1</span>
 <span class="s2">limit 100;</span>
